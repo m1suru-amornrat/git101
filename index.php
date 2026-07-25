@@ -21,12 +21,15 @@
       </a>
 
       <div class="accessibility-controls">
-        <button type="button" class="btn-acc" style="background: var(--primary-light); color: var(--primary);">
-          🌐 หน้าหลัก
-        </button>
         <button type="button" class="btn-acc" id="contrastToggle" title="สลับโหมดความคมชัดสูง">
           <span>◐</span> ความคมชัดสูง
         </button>
+        <div style="display: flex; gap: 4px; align-items: center; padding: 0 4px;">
+          <button type="button" class="btn-acc" id="fontSmall" title="ลดขนาดตัวอักษร">A-</button>
+          <span style="font-size: 0.8rem; color: var(--text-muted); padding: 0 2px;">ขนาดตัวอักษร</span>
+          <button type="button" class="btn-acc active" id="fontNormal" title="ขนาดปกติ">A</button>
+          <button type="button" class="btn-acc" id="fontLarge" title="เพิ่มขนาดตัวอักษร">A+</button>
+        </div>
         <button type="button" class="btn-acc" style="background: var(--primary-light); color: var(--primary);">
           👤 เข้าสู่ระบบ
         </button>

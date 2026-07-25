@@ -342,13 +342,23 @@ function openReportModal(data = {}) {
   const modal = document.getElementById('reportModal');
   const categorySelect = document.getElementById('formCategory');
   const descInput = document.getElementById('formDesc');
+  const titleInput = document.getElementById('formTitle');
+  const locationInput = document.getElementById('formLocation');
+  const phoneInput = document.getElementById('formPhone');
+  const previewZone = document.getElementById('imagePreviewContainer');
 
   if (categorySelect && data.category) {
     categorySelect.value = data.category;
   }
-  if (descInput && data.desc) {
-    descInput.value = data.desc;
+  
+  if (descInput) {
+    descInput.value = data.desc || '';
   }
+
+  if (titleInput && !data.title) titleInput.value = '';
+  if (locationInput && !data.location) locationInput.value = '';
+  if (phoneInput && !data.phone) phoneInput.value = '';
+  if (previewZone && !data.keepPreview) previewZone.innerHTML = '';
 
   modal?.classList.add('open');
 }
